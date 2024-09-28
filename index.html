@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="cont1">
+            <h2>Chemical Supplies</h2>
+            <div class="icon-container">
+                <i class="bi bi-plus-circle-fill" id="addChemical" onclick="addChemicals()"></i>
+                <i class="bi bi-arrow-up ml-2" onclick="scrollTable('up')"></i>
+                <i class="bi bi-arrow-down ml-2" onclick="scrollTable('down')"></i>
+                <i class="bi bi-trash-fill ml-2" style="color: red;" onclick="deleteSelectedRow()"></i>                
+                <i class="bi bi-arrow-counterclockwise ml-2" onclick="refreshPage()"></i>
+                <i class="bi bi-save ml-2" onclick="saveChemical()"></i>            
+            </div>
+        </div>
+        <div id="tableContainer" class="container mt-4" style="max-height: 544px; overflow-y: auto;">
+        <table class="table" id="chemicalTable">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center icon-tab"><i class="bi bi-check icon-large"></i></th>
+                    <th scope="col" id="nameHeader" onclick="sortTable('name', 'string')">Chemical Name<br><span class="head-below">sa</span></th>
+                    <th scope="col" id="vendorHeader" onclick="sortTable('vendor', 'string')">Vendor<br><span class="head-below">g/m³</span></th>
+                    <th scope="col" id="densityHeader" onclick="sortTable('density', 'number')">Density<br><span class="text-muted small">g/m³</span></th>
+                    <th scope="col" id="viscosityHeader" onclick="sortTable('viscosity', 'number')">Viscosity<br><span class="text-muted small">m²/s</span></th>
+                    <th scope="col">Packaging<br><span class="head-below">g/m³</span></th>
+                    <th scope="col" id="packSizeHeader" onclick="sortTable('packSize', 'number')">Pack Size<br><span class="head-below">g/m³</span></th>
+                    <th scope="col">Unit<br><span class="head-below">g/m³</span></th>
+                    <th scope="col" id="quantityHeader" onclick="sortTable('quantity', 'number')">Quantity<br><span class="head-below">g/m³</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="newChemicalRow" style="display: none;">
+                    <td><i class="bi bi-check icon-large"></i></td>
+                    <td><input class="ip1" id="newName" placeholder="Name"></td>
+                    <td><input class="ip2" id="newVendor" placeholder="Vendor"></td>
+                    <td><input class="ip3" id="newDensity" placeholder="Density"></td>
+                    <td><input class="ip3" id="newViscosity" placeholder="Viscosity"></td>
+                    <td><input class="ip3" id="newPackaging" placeholder="Packaging"></td>
+                    <td><input class="ip3" id="newPackSize" placeholder="Pack Size"></td>
+                    <td><input class="ip3" id="newUnit" placeholder="Unit"></td>
+                    <td><input class="ip3" id="newQuantity" placeholder="Quantity"></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</body>
+
+</html>

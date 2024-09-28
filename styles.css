@@ -1,0 +1,56 @@
+.icon-large {
+    font-size: 2rem; 
+    cursor: pointer;
+}
+
+.icon-tab {
+    padding: 0;
+}
+
+.table th {
+    vertical-align: middle; 
+}
+
+.header-unit {
+    line-height: normal; 
+    vertical-align: bottom; 
+}
+.head-below{
+    color: white;
+}
+
+.no-bootstrap-styles {
+    all: unset; 
+    font-size: 1.5rem;
+    padding: 0; 
+}
+
+.cont1{
+    display: flex;
+}
+
+th{
+    cursor: pointer;
+}
+
+.icon-container {   
+    cursor: pointer; 
+    margin-left: 40rem;
+    color: #0a0ab9f7;
+    font-size: 1.5rem;
+    display: flex;
+}
+
+.ip1{
+    width: 14rem;   
+}
+.ip2{
+    width: 7rem;   
+}
+.ip3{
+    width: 4rem;   
+}
+
+.selected-row {
+    background-color: #2563eb47;  
+}
